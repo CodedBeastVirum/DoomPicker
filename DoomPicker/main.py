@@ -3,6 +3,7 @@ import sys
 from PyQt6 import QtWidgets, uic
 import os
 import omg
+import DataBase_Collector
 
 
 class Ui(QtWidgets.QMainWindow):
@@ -11,7 +12,7 @@ class Ui(QtWidgets.QMainWindow):
 
     def __init__(self):
         #code to grab maps
-        Maps = os.listdir("G:\LEVELS\PWADS")
+        Maps = DataBase_Collector.ripper("G:\LEVELS\PWADS") #os.listdir("G:\LEVELS\PWADS")
         IWADs = os.listdir(r"C:\Users\andbo\gzdoom-4-7-1-Windows-64bit\IWAD")
         Mods = os.listdir(r"C:\Users\andbo\gzdoom-4-7-1-Windows-64bit\Mods")
         #Main Loader Code

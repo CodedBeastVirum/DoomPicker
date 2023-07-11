@@ -1,3 +1,3 @@
 {
-    "files": ["mainwindow.ui","dialog.ui","main.py","Settings.ui"]
+    "files": ["main.py","InitDB.py","Settings.ui","dialog.ui","mainwindow.ui","DataBase_Collector.py"]
 }

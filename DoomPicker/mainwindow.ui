@@ -14,464 +14,447 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QComboBox" name="MapSelect">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>100</y>
-      <width>131</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="StartAtSelectedMap">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>80</y>
-      <width>91</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string>Load Map:</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="FirstMapStart">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>60</y>
-      <width>101</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string>AutoLoad Map</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="MainMenuStart">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>40</y>
-      <width>111</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string>Start at main menu</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="Difficulty">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>150</y>
-      <width>131</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <item>
-     <property name="text">
-      <string>Default</string>
-     </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>27</width>
+        <height>15</height>
+       </size>
+      </property>
+     </spacer>
     </item>
-    <item>
-     <property name="text">
-      <string>Very Easy</string>
-     </property>
+    <item row="0" column="2" rowspan="3">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="maximumSize">
+       <size>
+        <width>150</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Launch Settings</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QRadioButton" name="MainMenuStart">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Start at main menu</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="FirstMapStart">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>AutoLoad Map</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="StartAtSelectedMap">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Load Map:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="MapSelect">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="DifficultyLabel">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Difficulty</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="Difficulty">
+         <item>
+          <property name="text">
+           <string>Default</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Very Easy</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Easy</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Normal</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Hard</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Very Hard</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Settings">
+         <property name="text">
+          <string>Settings</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Exit">
+         <property name="text">
+          <string>Exit</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="StartDoom">
+         <property name="text">
+          <string>Start Doom</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </item>
-    <item>
-     <property name="text">
-      <string>Easy</string>
-     </property>
+    <item row="1" column="0">
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>150</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Descriptions</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QTextEdit" name="IWAD_DESC">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>161</width>
+         <height>121</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="MOD_DESC">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>20</y>
+         <width>161</width>
+         <height>121</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="MapPack_Desc">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>20</y>
+         <width>161</width>
+         <height>121</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
     </item>
-    <item>
-     <property name="text">
-      <string>Normal</string>
-     </property>
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="minimumSize">
+       <size>
+        <width>519</width>
+        <height>340</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Load Selection</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QListWidget" name="IWAD_List">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>161</width>
+         <height>301</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="Mod_List">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>30</y>
+         <width>161</width>
+         <height>301</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="MapPackList">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>30</y>
+         <width>161</width>
+         <height>301</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="IWADLABEL">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>37</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>IWAD</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="ModLabel">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>20</y>
+         <width>37</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Mod</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MapPackLabel">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>20</y>
+         <width>71</width>
+         <height>10</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Map Pack</string>
+       </property>
+      </widget>
+     </widget>
     </item>
-    <item>
-     <property name="text">
-      <string>Hard</string>
-     </property>
+    <item row="2" column="0">
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>68</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Rating</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QSlider" name="MAPPACK_RATING_SLIDER">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>30</y>
+         <width>160</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>5</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MAP_RATING">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>40</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QSlider" name="MOD_RATING_SLIDER">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>30</y>
+         <width>160</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>5</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="MOD_RATING">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>40</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QSlider" name="IWAD_RATING_SLIDER">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>160</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>5</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="IWAD_RATING">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>40</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
     </item>
-    <item>
-     <property name="text">
-      <string>Very Hard</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="DifficultyLabel">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>130</y>
-      <width>51</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Difficulty</string>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="IWAD_List">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>40</y>
-      <width>161</width>
-      <height>301</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="IWADLABEL">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>20</y>
-      <width>37</width>
-      <height>12</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>IWAD</string>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="Mod_List">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>40</y>
-      <width>161</width>
-      <height>301</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ModLabel">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>20</y>
-      <width>37</width>
-      <height>12</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Mod</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="MapPackLabel">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>20</y>
-      <width>71</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="text">
-     <string>Map Pack</string>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="MapPackList">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>40</y>
-      <width>161</width>
-      <height>301</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox">
-    <property name="geometry">
-     <rect>
-      <x>640</x>
-      <y>20</y>
-      <width>151</width>
-      <height>551</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Launch Settings</string>
-    </property>
-    <widget class="QPushButton" name="StartDoom">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>520</y>
-       <width>131</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Start Doom</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="Settings">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>460</y>
-       <width>131</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Settings</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="Exit">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>490</y>
-       <width>131</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Exit</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QTextEdit" name="IWAD_DESC">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>370</y>
-      <width>161</width>
-      <height>121</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="MOD_DESC">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>370</y>
-      <width>161</width>
-      <height>121</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="MapPack_Desc">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>370</y>
-      <width>161</width>
-      <height>121</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_2">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>350</y>
-      <width>521</width>
-      <height>151</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Descriptions</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QSlider" name="IWAD_RATING_SLIDER">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>530</y>
-      <width>160</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>1</number>
-    </property>
-    <property name="maximum">
-     <number>5</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QSlider" name="MOD_RATING_SLIDER">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>530</y>
-      <width>160</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>1</number>
-    </property>
-    <property name="maximum">
-     <number>5</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QSlider" name="MAPPACK_RATING_SLIDER">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>530</y>
-      <width>160</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>1</number>
-    </property>
-    <property name="maximum">
-     <number>5</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="IWAD_RATING">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>540</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="MOD_RATING">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>540</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="MAP_RATING">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>540</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_3">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>500</y>
-      <width>521</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Rating</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_4">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>521</width>
-      <height>351</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Load Selection</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <zorder>groupBox_4</zorder>
+   </layout>
    <zorder>groupBox_3</zorder>
    <zorder>groupBox_2</zorder>
+   <zorder>groupBox_4</zorder>
    <zorder>groupBox</zorder>
-   <zorder>MapSelect</zorder>
-   <zorder>StartAtSelectedMap</zorder>
-   <zorder>FirstMapStart</zorder>
-   <zorder>MainMenuStart</zorder>
-   <zorder>Difficulty</zorder>
-   <zorder>DifficultyLabel</zorder>
-   <zorder>IWAD_List</zorder>
-   <zorder>IWADLABEL</zorder>
-   <zorder>Mod_List</zorder>
-   <zorder>ModLabel</zorder>
-   <zorder>MapPackLabel</zorder>
-   <zorder>MapPackList</zorder>
-   <zorder>IWAD_DESC</zorder>
-   <zorder>MOD_DESC</zorder>
-   <zorder>MapPack_Desc</zorder>
-   <zorder>IWAD_RATING_SLIDER</zorder>
-   <zorder>MOD_RATING_SLIDER</zorder>
-   <zorder>MAPPACK_RATING_SLIDER</zorder>
-   <zorder>IWAD_RATING</zorder>
-   <zorder>MOD_RATING</zorder>
-   <zorder>MAP_RATING</zorder>
+   <zorder>horizontalSpacer</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
