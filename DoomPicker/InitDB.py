@@ -29,3 +29,4 @@ FilesDB.execute('''CREATE TABLE MAPS
          NAME           TEXT     NOT NULL,
          DESCRIPTION    TEXT,
          RATING         TEXT);''')
+
