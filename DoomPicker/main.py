@@ -12,6 +12,7 @@ class Ui(QtWidgets.QMainWindow):
 
     def __init__(self):
         #code to grab maps
+
         Maps = DataBase_Collector.ripper("G:\LEVELS\PWADS") #os.listdir("G:\LEVELS\PWADS")
         DataBase_Collector.addlistings("MAP", Maps)
         IWADs = os.listdir(r"C:\Users\andbo\gzdoom-4-7-1-Windows-64bit\IWAD")

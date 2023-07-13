@@ -11,7 +11,7 @@ FilesDB = sqlite3.connect("FileData.db")
 
 def ripper(directory):
     DirectoryListing = sorted(os.listdir("G:\LEVELS\PWADS"))
-    DirectoryListing = ["G:\LEVELS\PWADS" + s for s in DirectoryListing]
+    DirectoryListing = ["G:\LEVELS\PWADS\\" + s for s in DirectoryListing]
     return DirectoryListing
 
 def addlistings(Type, List):
@@ -21,8 +21,8 @@ def addlistings(Type, List):
         DataToInsert = []
         for id, x in enumerate(List):
             head, tail = os.path.split(List[id])
-            DataToInsert.append((id,head,tail, "",3))
-            print(DataToInsert)
+            DataToInsert.append((List[id],head,tail, "",3))
+            #print(DataToInsert)
         cursor.executemany(Query, DataToInsert)
         FilesDB.commit()
         print("Total", cursor.rowcount, "Records inserted successfully into MAPS table")

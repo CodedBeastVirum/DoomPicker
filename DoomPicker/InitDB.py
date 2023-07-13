@@ -24,7 +24,7 @@ FilesDB.execute('''CREATE TABLE MODS
 
 
 FilesDB.execute('''CREATE TABLE MAPS
-         (ID INT PRIMARY KEY     NOT NULL,
+         (ID TEXT PRIMARY KEY     NOT NULL,
          PATH           TEXT    NOT NULL,
          NAME           TEXT     NOT NULL,
          DESCRIPTION    TEXT,
